@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Gaming Gift</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+<link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+<div class="overlay">
+
+    <!-- HEADER -->
+    
+<div class="header">
+
+    <!-- Gambar kecil -->
+    <img src="https://www.freepnglogos.com/uploads/fortnite-png/fortnite-by-epic-games-22.png" class="mini-img" alt="Icon">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="https://cms-assets.unrealengine.com/AVzjeqAbLRKi3W5jq0CAvz/ovBnvmuJSxO5xtgXZcef" alt="Gaming Logo">
+    </div>
+
+    <!-- Judul -->
+    <div class="judul">
+        <h1 class="fort-title">Redeem V-Bucks</h1>
+        <p class="sub-title">Epic Games Gift Card</p>
+    </div>
+
+</div>
+
+    </div>
+
+    <!-- FORM -->
+    <div class="form-box">
+
+        <div class="input-group">
+    <span class="icon">👤</span>
+    <input id="username" type="text" placeholder="Enter Username">
+</div>
+
+        
+<div id="alertBox" class="alert-box">
+    <img class="alert-img"
+         src="https://www.freepnglogos.com/uploads/fortnite-png/characters-fortnite-icon-moxalis-deviantart-23.png"
+         alt="Warning">
+
+    <div class="alert-text">
+        Please enter your Username.
+    </div>
+
+</div>
+    
+        <button id="enterBtn">ENTER</button>
+
+    </div>
+  
+  
+
+    <!-- GRID HADIAH -->
+  
+    <div class="grid-item" id="giftGrid">
+
+  
+
+<div class="gift-card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOxRlxrsPOhmnRPqExtfF7eEMm4qqy03ooSlaIcZMbUA&s=10">
+<h3>800 V-BUCKS<h3>
+<button class="claim">SELECT</button>
+</div>
+  
+
+<div class="gift-card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQh2lWRRSEuDdlSjNYhoqW8-C0a2X6-fz9riTQx4lp4bQ&s">
+<h3>2.400 V-BUCKS</h3>
+<button class="claim">SELECT</button>
+</div>
+
+ 
+<div class="gift-card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaCDo2PXleeeMe5IjnyjQ4BcymXbDSVq73ynPZjJMOdtff2dWrLLUfTxQA&s=10">
+<h3>4.500 V-BUCKS</h3>
+<button class="claim">SELECT</button>
+</div>
+
+ 
+<div class="gift-card">
+<img src="https://cdn1.epicgames.com/offer/fn/2560x1440_orange_2560x1440-3ad7698dfbc9484dab7da05ca7674b9b?resize=1&w=480&h=270&quality=medium">
+<h3>12.500 V-BUCKS</h3>
+<button class="claim">SELECT</button>
+</div>
+
+
+<div class="gift-card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbX6NPQG-gXX8VqqeDEGxEod2S1zEgGXmXYUSGcWzeqA&s=10">
+<h3>RANDOM RARES SKINS </h3>
+<button class="claim">SELECT</button>
+</div>
+
+
+<div class="gift-card">
+<img src="https://www.vice.com/wp-content/uploads/sites/2/2026/03/fortnite-chapter-7-season-2-battle-pass.jpg?w=1024">
+<h3>SHOWDOWN CHAPTER: SEASONS 2</h3>
+<button class="claim">SELECT</button>
+</div>
+
+
+<div class="gift-card">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCiKYT5zphgC4eVoNmp2z21N7jbFrmMKMqXvO_OpaSgw&s=10">
+<h3>ALL CHAPTER 5: SEASON 3</h3>
+<button class="claim">SELECT</button>
+</div>
+  
+
+
+<div class="gift-card">
+<img src="https://games.gg/cdn-cgi/image/width=1920,quality=75,format=auto,fit=scale-down,metadata=none,onerror=redirect/https://assets.games.gg/Fortnite_Chapter_7_Season_2_Weapons_and_Map_Revealed_Full_Loot_Pool_New_PO_Is_and_Features_db0256d191.webp">
+<h3>SHOWDOWN CHAPTER 7:SEASON 2</h3>
+<button class="claim">SELECT</button>
+</div>
+
+
+</div> <!-- ✅ Tutup giftGrid DI SINI -->
+
+</div> <!-- ✅ Tutup overlay DI SINI -->
+   
+<!-- POPUP -->
+<div id="popup" class="popup">
+
+  <div class="popup-box">
+
+    <img src="https://www.freepnglogos.com/uploads/fortnite-png/dark-vanguard-fortnite-outfit-skin-how-get-info-26.png" class="popup-icon-top" alt="Reward">
+
+<h2>Reward Selected!</h2>
+
+    <p>
+      The reward you selected will be sent shortly.
+      Please complete the final step below.
+    </p>
+
+    <p><b>Username:</b> <span id="showUser"></span></p>
+
+
+
+    <button id="confirmBtn">
+      CONFIRM
+    </button>
+
+  </div>
+
+</div>
+<script>
+
+const tombol = document.getElementById("enterBtn");
+const hadiah = document.getElementById("giftGrid");
+
+const username = document.getElementById("username");
+const alertBox = document.getElementById("alertBox");
+
+tombol.onclick = function () {
+
+    if (username.value.trim() === "") {
+
+        alertBox.style.display = "block";
+
+        alertBox.style.animation = "none";
+        alertBox.offsetHeight;
+        alertBox.style.animation = "shake .4s";
+
+        return;
+    }
+
+    alertBox.style.display = "none";
+
+    hadiah.style.display = "grid";
+
+    hadiah.scrollIntoView({
+        behavior: "smooth"
+    });
+};
+
+const popup = document.getElementById("popup");
+const showUser = document.getElementById("showUser");
+
+document.querySelectorAll(".claim").forEach(function (btn) {
+
+    btn.onclick = function () {
+
+        showUser.textContent = username.value;
+        popup.style.display = "flex";
+    };
+
+});
+
+document.getElementById("confirmBtn").onclick = function () {
+
+    window.location.href = "https://vbucksandskinredeemcod.blogspot.com/";
+
+};
+</script>
+
+
+</body>
+</html>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4977659,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4977659&101" alt="" border="0"></a></noscript>
+<!-- Histats.com  END  -->     
+
